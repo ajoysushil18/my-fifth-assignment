@@ -22,9 +22,6 @@ alert("Invalid credentials")
 }
 
 }
-
-
-
 async function loadIssues(){
 
 showLoader()
@@ -52,8 +49,6 @@ loadIssues()
 
 }
 
-
-
 function updateCounts(){
 
 document.getElementById("allCount").innerText =
@@ -66,8 +61,6 @@ document.getElementById("closedCount").innerText =
 allIssues.filter(i=>i.status==="closed").length
 
 }
-
-
 
 function displayIssues(issues){
 
@@ -112,8 +105,6 @@ container.innerHTML += card
 
 }
 
-
-
 function filterIssues(type){
 
 setActiveTab(type)
@@ -142,8 +133,6 @@ allIssues.filter(i=>i.status==="closed")
 
 }
 
-
-
 function setActiveTab(type){
 
 document.querySelectorAll(".tab")
@@ -161,8 +150,6 @@ document.getElementById(type+"Tab")
 tab.classList.add("bg-black","text-white")
 
 }
-
-
 
 async function searchIssues(){
 
@@ -184,8 +171,6 @@ displayIssues(data.data)
 hideLoader()
 
 }
-
-
 
 async function showIssue(id){
 
@@ -228,8 +213,6 @@ document.getElementById("modal")
 
 }
 
-
-
 function closeModal(){
 
 document.getElementById("modal")
@@ -237,16 +220,12 @@ document.getElementById("modal")
 
 }
 
-
-
 function showLoader(){
 
 document.getElementById("loader")
 .classList.remove("hidden")
 
 }
-
-
 
 function hideLoader(){
 
