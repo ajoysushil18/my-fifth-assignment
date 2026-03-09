@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Issues Dashboard</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#F8FAFC]">
+
+<!-- NAVBAR -->
+
+<nav class="bg-white border-b px-8 py-4 flex justify-between items-center">
+
+<div class="flex items-center gap-2">
+
+<img src="assets/logo.png" class="w-8">
+
+<h1 class="font-semibold text-lg">
+GitHub Issues Tracker
+</h1>
+
+</div>
+
+<div class="flex gap-2">
+
+<input
+id="searchInput"
+placeholder="Search issues..."
+class="border px-3 py-2 rounded-lg w-[220px]">
+
+<button
+onclick="searchIssues()"
+class="bg-black text-white px-4 py-2 rounded-lg">
+Search
+</button>
+
+</div>
+
+</nav>
+
+
+
+
+
+
+<!-- MODAL -->
+
+<div
+id="modal"
+class="fixed inset-0 bg-black bg-opacity-40 hidden items-center justify-center">
+
+<div class="bg-white w-[420px] p-6 rounded-xl">
+
+<h2 id="modalTitle" class="text-xl font-bold mb-2"></h2>
+
+<p id="modalDesc" class="text-gray-500 mb-4"></p>
+
+<div class="text-sm space-y-1">
+
+<p id="modalAuthor"></p>
+<p id="modalStatus"></p>
+<p id="modalPriority"></p>
+<p id="modalLabel"></p>
+<p id="modalDate"></p>
+
+</div>
+
+<button
+onclick="closeModal()"
+class="bg-black text-white px-4 py-2 rounded-lg mt-4">
+Close
+</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
